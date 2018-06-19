@@ -49,22 +49,18 @@ img {
 
 /* Start Navbar*/
 .main-nav ul {
-    display: grid;
-    grid-gap: 20px;
     grid-template-columns: repeat(4, 1fr);
     list-style: none;
     padding: 0
 }
 
 .main-nav ul a {
-    background: var(--primary);
     display: block;
     text-decoration: none;
     padding: 0.8rem;
     text-align: center;
     text-transform: uppercase;
     font-size: 1.1rem;
-    box-shadow: var(--shadow);
     color: var(--dark);
     transition: all .8s ease-in-out
 }
@@ -81,8 +77,6 @@ img {
 
 /* Start Top Container */
 .top-container {
-    display: grid;
-    grid-gap: 20px;
     grid-template-columns: 4fr 1fr;
     grid-template-areas: 
         "header box-a"
@@ -104,7 +98,6 @@ img {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    box-shadow: var(--shadow)
 }
 
 .showcase h1 {
@@ -123,11 +116,9 @@ img {
 
 /* top-box */
 .top-box {
-	background: var(--primary);
     display: grid;
     align-items: center;
     justify-items: center;
-    box-shadow: var(--shadow);
     padding: 1.5rem
 }
 
@@ -153,16 +144,10 @@ img {
 
 
 /* Start Boxes */
-.boxes {
-	display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
+.boxes {grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));}
 
 .boxes .box {
-    background: var(--primary);
     text-align: center;
-    box-shadow: var(--shadow);
     padding: 1.5rem 2rem;
 }
 /* End Boxes */
@@ -177,8 +162,6 @@ img {
     grid-gap: 30px;
     grid-template-columns: repeat(2, 1fr);
     padding: 3rem;
-    background: var(--primary);
-    box-shadow: var(--shadow);
 }
 
 .info h2 {margin: 0}
@@ -189,15 +172,7 @@ img {
 
 
 /* Start portfolio */
-.portfolio {
-	display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.portfolio img{
-    box-shadow: var(--shadow);
-}
+.portfolio {grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));}
 /* End portfolio */
 
 
@@ -217,6 +192,30 @@ footer {
 
 /*/////////////////////////////////////////////////////*/
 
+
+/* Start Grouping Style */
+.main-nav ul,
+.top-container,
+.boxes,
+.portfolio {display: grid; grid-gap: 20px}
+
+
+.main-nav ul a,
+.showcase,
+.top-box,
+.boxes .box,
+.info,
+.portfolio img {box-shadow: var(--shadow)}
+
+
+.main-nav ul a,
+.top-box,
+.boxes .box,
+.info {background: var(--primary)}
+/* End Grouping Style */
+
+
+/*/////////////////////////////////////////////////////*/
 
 /* Media Queries */
 
